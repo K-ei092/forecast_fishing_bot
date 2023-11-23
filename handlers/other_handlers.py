@@ -9,5 +9,5 @@ router = Router()
 async def send_echo(message: Message):
     await message.answer(
         text=f'Мне неизвестна команда "{message.text}"\n'
-             'Попробуй набрать /start или /forecast'
+             'Попробуй набрать /start'
     )

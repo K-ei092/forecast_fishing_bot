@@ -14,54 +14,82 @@ def create_state_keyboard() -> InlineKeyboardMarkup:
         callback_data='^astrakhan^')
 
     button_state_2 = InlineKeyboardButton(
+        text='Башкортостан Республика',
+        callback_data='^bashkortostan^')
+
+    button_state_3 = InlineKeyboardButton(
         text='Белгородская область',
         callback_data='^belgorod^')
 
-    button_state_3 = InlineKeyboardButton(
+    button_state_4 = InlineKeyboardButton(
+        text='Владимирская область',
+        callback_data='^vladimir^')
+
+    button_state_5 = InlineKeyboardButton(
         text='Волгоградская область',
         callback_data='^volgograd^')
 
-    button_state_4 = InlineKeyboardButton(
+    button_state_6 = InlineKeyboardButton(
         text='Воронежская область',
         callback_data='^voronezh^')
 
-    button_state_5 = InlineKeyboardButton(
+    button_state_7 = InlineKeyboardButton(
         text='Ивановская область',
         callback_data='^ivanovo^')
 
-    button_state_6 = InlineKeyboardButton(
+    button_state_8 = InlineKeyboardButton(
+        text='Иркутская область',
+        callback_data='^irkutsk^')
+
+    button_state_9 = InlineKeyboardButton(
         text='Калужская область',
         callback_data='^kaluga^')
 
-    button_state_7 = InlineKeyboardButton(
+    button_state_10 = InlineKeyboardButton(
         text='Карелия Республика',
         callback_data='^karelia^')
 
-    button_state_8 = InlineKeyboardButton(
+    button_state_11 = InlineKeyboardButton(
         text='Краснодарский край',
         callback_data='^krasnodar^')
 
-    button_state_9 = InlineKeyboardButton(
+    button_state_12 = InlineKeyboardButton(
         text='Курская область',
         callback_data='^kursk^')
 
-    button_state_10 = InlineKeyboardButton(
+    button_state_13 = InlineKeyboardButton(
+        text='Красноярский край',
+        callback_data='^krasnoyarsk^')
+
+    button_state_14 = InlineKeyboardButton(
+        text='Курганская область',
+        callback_data='^kurgan^')
+
+    button_state_15 = InlineKeyboardButton(
         text='Ленинградская область',
         callback_data='^leningrad^')
 
-    button_state_11 = InlineKeyboardButton(
+    button_state_16 = InlineKeyboardButton(
+        text='Липецкая область',
+        callback_data='^lipetsk^')
+
+    button_state_17 = InlineKeyboardButton(
         text='Московская область',
         callback_data='^moscow^')
 
-    button_state_12 = InlineKeyboardButton(
+    button_state_18 = InlineKeyboardButton(
         text='Омская область',
         callback_data='^omsk^')
 
-    button_state_13 = InlineKeyboardButton(
+    button_state_19 = InlineKeyboardButton(
+        text='Ростовская область',
+        callback_data='^rostov-na-donu^')
+
+    button_state_20 = InlineKeyboardButton(
         text='Ставропольский край',
         callback_data='^stavropol^')
 
-    button_state_14 = InlineKeyboardButton(
+    button_state_21 = InlineKeyboardButton(
         text='Тверская область',
         callback_data='^tver^')
 
@@ -69,7 +97,9 @@ def create_state_keyboard() -> InlineKeyboardMarkup:
                                             button_state_4, button_state_5, button_state_6,
                                             button_state_7, button_state_8, button_state_9,
                                             button_state_10, button_state_11, button_state_12,
-                                            button_state_13, button_state_14]
+                                            button_state_13, button_state_14, button_state_15,
+                                            button_state_16, button_state_17, button_state_18,
+                                            button_state_19, button_state_20, button_state_21]
 
     kb_builder.row(*buttons, width=2)
     return kb_builder.as_markup()

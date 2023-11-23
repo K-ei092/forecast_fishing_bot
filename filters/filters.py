@@ -1,6 +1,6 @@
 from aiogram import Bot
 from aiogram.filters import BaseFilter
-from aiogram.types import CallbackQuery, Message
+from aiogram.types import Message
 from config_data.config import CHAT_ID
 
 class IsSubscriber(BaseFilter):

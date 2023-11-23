@@ -52,7 +52,7 @@ async def process_forecast_command(callback: CallbackQuery):
 @router.callback_query(F.data.startswith('^') and F.data.endswith('^'))
 async def process_fish_press(callback: CallbackQuery):
     users_db[callback.from_user.id] = [LEXICON_STATE[callback.data]]
-    keyboard_fish = create_inline_kb(5, last_btn='21', **BUTTONS)
+    keyboard_fish = create_inline_kb(5, last_btn='25', **BUTTONS)
     text = LEXICON['fish']
     await callback.message.edit_text(
         text=text,

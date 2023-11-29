@@ -87,13 +87,20 @@ def _get_dict_forecast(soup):
     li_second = [[x for x in tag.text.split() if x.isdigit()] for tag in tag_second]
     li_third = [[x for x in tag.text.split() if x.isdigit()] for tag in tag_third]
 
+    li_html = [tag.text for tag in tag_today]
+    string_html = ''
+
+    for elm in li_html:
+        string_html += elm
+
     for key in dict_fish:
-        if len(li_today) > 0:
-            dict_fish[key].append(li_today.pop(0))
-        if len(li_second) > 0:
-            dict_fish[key].append(li_second.pop(0))
-        if len(li_third) > 0:
-            dict_fish[key].append(li_third.pop(0))
+        if key in string_html:
+            if len(li_today) > 0:
+                dict_fish[key].append(li_today.pop(0))
+            if len(li_second) > 0:
+                dict_fish[key].append(li_second.pop(0))
+            if len(li_third) > 0:
+                dict_fish[key].append(li_third.pop(0))
 
     return dict_fish
 
@@ -163,7 +170,7 @@ def get_result(id):
                    f'обед - {_get_force(thd)}\n' \
                    f'вечер - {_get_force(the)}\n' \
                    f'\n' \
-                   f'прогноз клева на t.me/prognoz_rubalku_bot'
+                   f'прогноз клева на\nt.me/prognoz_rubalku_bot'
 
         else:
             return 'К сожалению, информация по данной рыбе отсутствует.'

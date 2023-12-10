@@ -152,28 +152,28 @@ def get_result(id):
             thd = forecast[users_db[id][1]][2][2]
             the = forecast[users_db[id][1]][2][3]
 
-            return f'<b>{fish}</b>\n' \
+            return f'*{fish}*\n' \
                    f'\n' \
-                   f'<u>Сегодня</u>:\n' \
-                   f'ночь - {_get_force(tn)}\n' \
-                   f'утро - {_get_force(tm)}\n' \
-                   f'обед - {_get_force(td)}\n' \
-                   f'вечер - {_get_force(te)}\n\n' \
-                   f'<u>Завтра</u>:\n' \
-                   f'ночь - {_get_force(sn)}\n' \
-                   f'утро - {_get_force(sm)}\n' \
-                   f'обед - {_get_force(sd)}\n' \
-                   f'вечер - {_get_force(se)}\n\n' \
-                   f'<u>Послезавтра</u>:\n' \
-                   f'ночь - {_get_force(thn)}\n' \
-                   f'утро - {_get_force(thm)}\n' \
-                   f'обед - {_get_force(thd)}\n' \
-                   f'вечер - {_get_force(the)}\n' \
+                   f'__Сегодня__:\n' \
+                   f'ночь \- {_get_force(tn)}\n' \
+                   f'утро \- {_get_force(tm)}\n' \
+                   f'обед \- {_get_force(td)}\n' \
+                   f'вечер \- {_get_force(te)}\n\n' \
+                   f'__Завтра__:\n' \
+                   f'ночь \- {_get_force(sn)}\n' \
+                   f'утро \- {_get_force(sm)}\n' \
+                   f'обед \- {_get_force(sd)}\n' \
+                   f'вечер \- {_get_force(se)}\n\n' \
+                   f'__Послезавтра__:\n' \
+                   f'ночь \- {_get_force(thn)}\n' \
+                   f'утро \- {_get_force(thm)}\n' \
+                   f'обед \- {_get_force(thd)}\n' \
+                   f'вечер \- {_get_force(the)}\n' \
                    f'\n' \
-                   f'прогноз клева на\nt.me/prognoz_rubalku_bot'
+                   f'прогноз клева в боте\n[Прогноз рыбака](t.me/prognoz_rubalku_bot)'
 
         else:
-            return 'К сожалению, информация по данной рыбе отсутствует.'
+            return 'К сожалению, информация по данной рыбе отсутствует'
 
     else:
         with open('result.txt', 'w', encoding='utf-8') as file:
@@ -192,7 +192,7 @@ def get_result(id):
                     thm = forecast[key][2][1]
                     thd = forecast[key][2][2]
                     the = forecast[key][2][3]
-                    res = f'{fish}.\n Сегодня: ночь - {_get_force(tn)} / утро - {_get_force(tm)} ' \
+                    res = f'{fish}.\nСегодня: ночь - {_get_force(tn)} / утро - {_get_force(tm)} ' \
                           f'/ обед - {_get_force(td)} / вечер - {_get_force(te)}\n' \
                           f'Завтра: ночь - {_get_force(sn)} / утро - {_get_force(sm)} ' \
                           f'/ обед - {_get_force(sd)} / вечер - {_get_force(se)} \n' \

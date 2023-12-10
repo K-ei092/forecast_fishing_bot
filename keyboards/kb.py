@@ -1,8 +1,18 @@
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from aiogram.utils.keyboard import InlineKeyboardBuilder
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
+from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 
 
-# функция создания клавиатуры с регионами
+# функция создания кнопки "поделиться местоположением"
+def create_geo_keyboard() -> ReplyKeyboardMarkup:
+    builder = ReplyKeyboardBuilder()
+    builder.row(
+        KeyboardButton(text="Поделиться местоположением", request_location=True)
+    )
+    keyboard = builder.as_markup(resize_keyboard=True, one_time_keyboard=True)
+    return keyboard
+
+
+# функция построения клавиатуры с регионами
 def create_state_keyboard() -> InlineKeyboardMarkup:
 
     # Инициализируем билдер
@@ -106,12 +116,17 @@ def create_state_keyboard() -> InlineKeyboardMarkup:
 
 
 # Функция для генерации инлайн-клавиатуры "Продолжить"
-def create_continue_keyboard():
-    button_continue = InlineKeyboardButton(
-        text='Продолжить',
-        callback_data='forecast')
+def create_forecast_keyboard():
+    button_forecast_fishing = InlineKeyboardButton(
+        text='Прогноз клёва 🎣',
+        callback_data='fishing')
+    button_forecast_weather = InlineKeyboardButton(
+        text='Прогноз погоды ⛈',
+        callback_data='weather')
     keyboard_continue = InlineKeyboardMarkup(inline_keyboard=[
-                                                 [button_continue]])
+        [button_forecast_fishing],
+        [button_forecast_weather]
+    ])
     return keyboard_continue
 
 
